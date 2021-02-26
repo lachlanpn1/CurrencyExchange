@@ -1,0 +1,42 @@
+<div class="currency-stats-table-container">
+    <div *ngIf="!this.exchangeRatesError" class="currency-stats-table">
+        <div class="currency-stats-table-header">
+            <div class="mat-title header-cell">
+                Currency
+            </div>
+            <div class="mat-title header-cell">
+                Value (to 1 {{selectedCurrency.code}})
+            </div>
+        </div>
+        <div *ngFor="let exchange of exchangeRatesTable1" class="currency-stats-table-row">
+            <div class="table-row-cell row-heading">
+                {{exchange.code}} - {{getCurrencyName(exchange.code)}}
+            </div>
+            <div class="table-row-cell row-value">
+                {{exchange.rate | number : '1.0-4' }}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="this.exchangeRatesError">
+        <p>{{this.exchangeRatesError}}</p>
+    </div>
+
+    <div *ngIf="!this.exchangeRatesError" class="currency-stats-table">
+        <div class="currency-stats-table-header">
+            <div class="mat-title header-cell">
+                Currency
+            </div>
+            <div class="mat-title header-cell">
+                Value (to 1 {{selectedCurrency.code}})
+            </div>
+        </div>
+        <div *ngFor="let exchange of exchangeRatesTable2" class="currency-stats-table-row">
+            <div class="table-row-cell row-heading">
+                {{exchange.code}} - {{getCurrencyName(exchange.code)}}
+            </div>
+            <div class="table-row-cell row-value">
+                {{exchange.rate | number : '1.0-4' }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<mat-card class="currency-picker">
+    <p class="mat-headline currency-picker-headline">Select currency to start</p>
+    <mat-form-field class="currency-picker-form-field" appearance="fill">
+        <mat-label>Currency</mat-label>
+        <mat-select [(value)]="selectedCurrency">
+            <mat-option (click)="setSelectedCurrency()" *ngFor=" let currency of currencies " [value]="currency ">{{currency.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>

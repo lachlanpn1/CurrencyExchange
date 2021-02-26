@@ -1,0 +1,43 @@
+.currency-overview {
+    width: 28em;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.currency-overview-code {
+    margin-bottom: 0px !important;
+    font-weight: bold;
+}
+
+.currency-overview-users {
+    width: 100%;
+    border-top: 3px solid rgb(77, 76, 76);
+}
+
+.currency-overview-users-label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.currency-overview-users-country {
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+}
+
+.currency-overview-users-flag {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.currency-overview-users-name {
+    font-weight: bold;
+}
+
+.currency-overview-users-overflow:hover {
+    color: #c2185b;
+    cursor: pointer;
+}

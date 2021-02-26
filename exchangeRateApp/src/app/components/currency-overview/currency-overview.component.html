@@ -1,0 +1,19 @@
+<mat-card class="currency-overview">
+    <div *ngIf="selectedCurrency">
+        <p class="mat-display-4 currency-overview-code">{{selectedCurrency.code}}</p>
+        <p class="currency-overview-name">{{selectedCurrency.name | uppercase }} ({{selectedCurrency.symbol}})</p>
+        <div class="currency-overview-users">
+            <p class="currency-overview-users-label">Used by</p>
+            <div *ngFor="let user of usersToDisplay" class="currency-overview-users-country">
+                <img class="currency-overview-users-flag" src={{user.flag}}/>
+                <span class="currency-overview-users-name">{{user.name}}</span>
+            </div>
+            <div *ngIf="users && users.length > maximumUsersToDisplay">
+                <span (click)="increaseMaximumUsersToDisplay(2)" class="currency-overview-users-overflow">...and {{users.length - maximumUsersToDisplay}} more</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!selectedCurrency">
+        <p>Select a currency to begin.</p>
+    </div>
+</mat-card>

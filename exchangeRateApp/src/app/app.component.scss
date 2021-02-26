@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-currency-overview {
+    display: flex;
+    flex: 1;
+}
+
+.app-currency-stats-container {
+    display: flex;
+    flex: 1;
+}
